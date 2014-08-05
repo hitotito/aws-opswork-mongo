@@ -1,2 +1,2 @@
 include_recipe "mongodb::10gen_repo"
-inlcude_recipe "mongodb::default"
+include_recipe "mongodb::default"
