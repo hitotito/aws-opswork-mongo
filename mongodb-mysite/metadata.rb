@@ -1,4 +1,4 @@
-name		"mongodb-site"
+name		"mongodb-mysite"
 description	"Example cookbook for MongoDB Berkshelf based install"
 maintainer	"hitotito"
 license		"Apache 2.0"
