@@ -4,7 +4,7 @@ configsrvs = search(
 )
 
 
-log "message" do
+log "message-length #{configsrvs.length}" do
 	message "length: #{configsrvs.length}"
 	level :debug
 end
