@@ -1,6 +1,6 @@
 configsrvs = search(
 	:node,
-	'recipe:configserver'
+	'recipe:"configserver"'
 )
 
 
