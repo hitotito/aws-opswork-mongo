@@ -9,9 +9,6 @@
 # 	level :debug
 # end
 
-
-include_recipe "aws"
-
 hostname = node[:opsworks][:instance][:hostname]
 
 log "log-hostname: #{hostname}" do
