@@ -1,6 +1,6 @@
 configsrvs = search(
 	:node,
-	mongodb_is_configserver:true
+	'recipe:configserver'
 )
 
 
