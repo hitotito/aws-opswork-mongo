@@ -10,4 +10,4 @@ configsrvs = search(
 	chef_environment:#{node.chef_environment}"
 )
 
-Chef.Log.error("configsrvs length: #{configsrvs.length}")
+Chef::Log.error("configsrvs length: #{configsrvs.length}")
