@@ -27,6 +27,10 @@ test = search(
 
 Chef::Log.error("test array : #{test.length}")
 
+tets.each{ |x|
+	Chef::Log.error("fqdn for test : #{x['fqdn']}")
+}
+
 mongodb_instance node['mongodb']['instance_name'] do
 	mongodb_type 'mongos'
 	port         node['mongodb']['config']['port']
