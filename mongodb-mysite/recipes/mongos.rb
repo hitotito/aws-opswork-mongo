@@ -27,7 +27,7 @@ test = search(
 
 Chef::Log.error("test array : #{test.length}")
 
-tets.each{ |x|
+test.each{ |x|
 	Chef::Log.error("fqdn for test : #{x['fqdn']}")
 }
 
