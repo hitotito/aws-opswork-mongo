@@ -8,4 +8,5 @@ configsrvs = search(
 	"mongodb_cluster_name:#{node['mongodb']['cluster_name']}"
 )
 
+Chef::Log.error("configsrvs cluster_name : #{node['mongodb']['cluster_name']}")
 Chef::Log.error("configsrvs length: #{configsrvs.length}")
