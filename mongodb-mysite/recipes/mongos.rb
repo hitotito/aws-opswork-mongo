@@ -10,3 +10,11 @@ configsrvs = search(
 
 Chef::Log.error("configsrvs cluster_name : #{node['mongodb']['cluster_name']}")
 Chef::Log.error("configsrvs length: #{configsrvs.length}")
+
+
+test = search(
+	:node,
+	"role:mongodb-config"
+)
+
+Chef::Log.error("test array : #{test.length}")
