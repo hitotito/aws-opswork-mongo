@@ -29,6 +29,7 @@ Chef::Log.error("test array : #{test.length}")
 
 test.each{ |x|
 	Chef::Log.error("fqdn for test : #{x['fqdn']}")
+	Chef::Log.error("port : #{x['mongodb']['config']['port']}")
 }
 
 mongodb_instance node['mongodb']['instance_name'] do
