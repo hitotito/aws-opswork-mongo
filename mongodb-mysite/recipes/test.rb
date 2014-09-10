@@ -3,7 +3,7 @@ test1 = search(
 	"mongodb_cluster_name:#{node['mongodb']['cluster_name']}"
 )
 Chef::Log.error("test1 array : #{test1.length}")
-Chef::Log.error("test1 culster_name : #{node['mongodb']['cluster_name']}")
+Chef::Log.error("test1 cluster_name : #{node['mongodb']['cluster_name']}")
 test1.each{ |x|
 	Chef::Log.error("test1: fqdn for test : #{x['fqdn']}")
 }
