@@ -1,16 +1,28 @@
-# configsrvs = search(
-# 	:node,
-# 	'recipe:"configserver"'
-# )
-# 
-# 
-# log "message-length #{configsrvs.length}" do
-# 	message "length: #{configsrvs.length}"
-# 	level :debug
-# end
+test1 = search(
+	:node,
+	"mongodb_cluster_name:#{node['mongodb']['cluster_name']}"
+)
+Chef::Log.error("test array : #{test1.length}")
+test1.each{ |x|
+	Chef::Log.error("fqdn for test : #{x['fqdn']}")
+}
 
-hostname = node[:opsworks][:instance][:hostname]
+test2  = search(
+	:node,
+	"chef_environment:#{node.chef_environment}"
+)
+Chef::Log.error("test array : #{test2.length}")
+test2.each{ |x|
+	Chef::Log.error("fqdn for test : #{x['fqdn']}")
+}
 
-log "log-hostname: #{hostname}" do
-	level :debug
-end
+test3  = search(
+	:node,
+	"mongodb_is_configserver:true"
+)
+Chef::Log.error("test array : #{test3.length}")
+test3.each{ |x|
+	Chef::Log.error("fqdn for test : #{x['fqdn']}")
+}
+
+
