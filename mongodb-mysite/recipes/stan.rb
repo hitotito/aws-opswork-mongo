@@ -9,6 +9,15 @@ script "iptables" do
 	EOH
 end
 
+script "iptables" do
+	interpreter "bash"
+	user "root"
+	cwd "/tmp"
+	code <<-EOH
+		mongos --configdb configdb1:27019 --fork --logpath /var/log/mongodb/mongod.log
+	EOH
+end
+
 directory "/var/log/node" do
 	owner "root"
 	group "root"
