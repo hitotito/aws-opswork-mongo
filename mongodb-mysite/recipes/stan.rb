@@ -8,3 +8,9 @@ script "iptables" do
 		service iptables save
 	EOH
 end
+
+directory "/var/log/node" do
+	owner "root"
+	group "root"
+	recursive true
+end
