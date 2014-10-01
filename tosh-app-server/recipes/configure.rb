@@ -18,6 +18,13 @@ script "mongos" do
 	EOH
 end
 
+directory "/var/log/node" do
+	mode "0644"
+	owner "root"
+	group "root"
+	recursive true
+end
+
 file "/var/log/node/stan.log" do
 	mode  "0644"
 	owner "root"
