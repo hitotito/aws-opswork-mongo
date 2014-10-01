@@ -14,12 +14,13 @@ script "iptables" do
 	user "root"
 	cwd "/tmp"
 	code <<-EOH
-		mongos --configdb configdb1:27019 --fork --logpath /var/log/mongodb/mongod.log
+		mongos --configdb configdb2:27019 --fork --logpath /var/log/mongodb/mongod.log
 	EOH
 end
 
-directory "/var/log/node" do
+file "/var/log/node/stan.log" do
+	mode  "0644"
 	owner "root"
 	group "root"
-	recursive true
+	action :create
 end
