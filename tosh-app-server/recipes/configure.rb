@@ -1,12 +1,13 @@
-script "iptables" do
-	interpreter "bash"
-	user "root"
-	cwd "/tmp"
-	code <<-EOH
-		iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 5000
-		iptables -t nat -I OUTPUT -p tcp -o lo --dport 80 -j REDIRECT --to-ports 5000
-		service iptables save
-	EOH
+iptables_ng_rule '99-redirect' do
+	chain 'PREROUTING'
+	table 'nat'
+	rule '-p tcp --dport 80 -j REDIRECT --to-ports 5000'
+end
+
+iptables_ng_rule '100-loopbackredirect' do
+	chain 'OUTPUT'
+	table 'nat'
+	rule '-p tcp -o lo --dport 80 -j REDIRECT --to-ports 5000'
 end
 
 script "mongos" do
