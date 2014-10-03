@@ -3,7 +3,7 @@ script "mongos" do
 	user "root"
 	cwd "/tmp"
 	code <<-EOH
-		mongos --configdb configdb2:27019 --fork --logpath /var/log/mongodb/mongod.log
+		mongos --configdb configdb1:27019 --fork --logpath /var/log/mongodb/mongod.log
 	EOH
 end
 
