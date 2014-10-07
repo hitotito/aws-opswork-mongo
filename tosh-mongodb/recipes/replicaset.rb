@@ -1,1 +1,1 @@
-include "mongodb::replicaset"
+include_recipe "mongodb::replicaset"
