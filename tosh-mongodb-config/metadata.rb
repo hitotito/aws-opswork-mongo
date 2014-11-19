@@ -1,4 +1,4 @@
-name		"mongodb-mysite"
+name		"tosh-mongodb-config"
 description	"Example cookbook for MongoDB Berkshelf based install"
 maintainer	"hitotito"
 license		"Apache 2.0"
