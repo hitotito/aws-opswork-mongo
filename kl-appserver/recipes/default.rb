@@ -14,5 +14,5 @@ end
 
 execute "install bower npm package" do
 	user "root"
-	command "npm install -g bower"
+	command "/usr/local/bin/npm install -g bower"
 end
