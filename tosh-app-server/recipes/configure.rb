@@ -21,3 +21,7 @@ file "/var/log/node/stan.log" do
 	action :create
 end
 
+execute "bower" do
+	command "npm install -g bower"
+	user "root"
+end
